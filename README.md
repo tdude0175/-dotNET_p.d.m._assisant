@@ -1,4 +1,4 @@
-# -dotNET_p.d.m._assisant
+# -dotNET_p.d.m._assistant
 
 ## Plans for project:
 Add a functional login and database to access to save data to use.
