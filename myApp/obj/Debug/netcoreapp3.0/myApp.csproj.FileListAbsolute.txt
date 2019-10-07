@@ -1,0 +1,11 @@
+/home/student/PersonalProjects/dotnetPractice/myApp/bin/Debug/netcoreapp3.0/myApp
+/home/student/PersonalProjects/dotnetPractice/myApp/bin/Debug/netcoreapp3.0/myApp.deps.json
+/home/student/PersonalProjects/dotnetPractice/myApp/bin/Debug/netcoreapp3.0/myApp.runtimeconfig.json
+/home/student/PersonalProjects/dotnetPractice/myApp/bin/Debug/netcoreapp3.0/myApp.runtimeconfig.dev.json
+/home/student/PersonalProjects/dotnetPractice/myApp/bin/Debug/netcoreapp3.0/myApp.dll
+/home/student/PersonalProjects/dotnetPractice/myApp/bin/Debug/netcoreapp3.0/myApp.pdb
+/home/student/PersonalProjects/dotnetPractice/myApp/obj/Debug/netcoreapp3.0/myApp.csprojAssemblyReference.cache
+/home/student/PersonalProjects/dotnetPractice/myApp/obj/Debug/netcoreapp3.0/myApp.AssemblyInfoInputs.cache
+/home/student/PersonalProjects/dotnetPractice/myApp/obj/Debug/netcoreapp3.0/myApp.AssemblyInfo.cs
+/home/student/PersonalProjects/dotnetPractice/myApp/obj/Debug/netcoreapp3.0/myApp.dll
+/home/student/PersonalProjects/dotnetPractice/myApp/obj/Debug/netcoreapp3.0/myApp.pdb
