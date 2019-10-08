@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/student/PersonalProjects/dotnetPractice/myApp/myApp.csproj": {}
+    "/home/student/PersonalProjects/dotnetPractice/dotNET_p.d.m._assisant/myApp/myApp.csproj": {}
   },
   "projects": {
-    "/home/student/PersonalProjects/dotnetPractice/myApp/myApp.csproj": {
+    "/home/student/PersonalProjects/dotnetPractice/dotNET_p.d.m._assisant/myApp/myApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/student/PersonalProjects/dotnetPractice/myApp/myApp.csproj",
+        "projectUniqueName": "/home/student/PersonalProjects/dotnetPractice/dotNET_p.d.m._assisant/myApp/myApp.csproj",
         "projectName": "myApp",
-        "projectPath": "/home/student/PersonalProjects/dotnetPractice/myApp/myApp.csproj",
+        "projectPath": "/home/student/PersonalProjects/dotnetPractice/dotNET_p.d.m._assisant/myApp/myApp.csproj",
         "packagesPath": "/home/student/.nuget/packages/",
-        "outputPath": "/home/student/PersonalProjects/dotnetPractice/myApp/obj/",
+        "outputPath": "/home/student/PersonalProjects/dotnetPractice/dotNET_p.d.m._assisant/myApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/student/.nuget/NuGet/NuGet.Config"

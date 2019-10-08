@@ -36,20 +36,63 @@ namespace myApp
 	    }
 	    public static void Calculator()
 	    {
-	        Console.WriteLine("Welcome to the calculator");
-	        Console.WriteLine("Please Enter the problem");
-	        Console.WriteLine("[ + for addition] [ - for subtraction] [ * for multiplication ] [ / for division ] ");
-	        string calculation = Console.ReadLine();
-	        Console.WriteLine(calculation);
-	        var seperatingCharacters = calculation.Split();
-	        for(int i = 0; i < seperatingCharacters.length(); i++)
-	        {
-	        Console.WriteLine();
-	        }
+	        bool calculating = true;
+	       while(calculating)
+	       {
+	            Console.WriteLine();
+                Console.WriteLine("Welcome to the calculator");
+                Console.WriteLine("Please Enter the problem or type exit to return");
+                Console.WriteLine("[ + for addition] [ - for subtraction] [ * for multiplication ] [ / for division ] ");
+                string calculation = Console.ReadLine();
+                var seperatingCharacters = calculation.Split();
+                if(calculation == "exit")
+                {
+                    Console.WriteLine("returning home");
+                    Console.WriteLine();
+                    calculating = false;
+                    break;
+                }
+                for(int i = 0; i < seperatingCharacters.Length; i++)
+                {
+                    if(seperatingCharacters[i] == "*")
+                    {
+                        Console.WriteLine(multiply(Int32.Parse(seperatingCharacters[i-1]), Int32.Parse(seperatingCharacters[i+1])));
+                    }
+                    if(seperatingCharacters[i] == "/")
+                    {
+                        Console.WriteLine(divide(Int32.Parse(seperatingCharacters[i-1]), Int32.Parse(seperatingCharacters[i+1])));
+                    }
+                    if(seperatingCharacters[i] == "+")
+                    {
+                        Console.WriteLine(add(Int32.Parse(seperatingCharacters[i-1]), Int32.Parse(seperatingCharacters[i+1])));
+                    }
+                    if(seperatingCharacters[i] == "-")
+                    {
+                        Console.WriteLine(subtract(Int32.Parse(seperatingCharacters[i-1]), Int32.Parse(seperatingCharacters[i+1])));
+                    }
+
+                }
+            }
 	    }
 	    public static int multiply(int firstNumber , int secondNumber)
 	    {
-	        return(firstNumber * secondNumber);
+	        int result = firstNumber * secondNumber;
+	        return(result);
 	    }
+	    public static int divide(int firstNumber , int secondNumber)
+        {
+            int result = firstNumber / secondNumber;
+            return(result);
+        }
+        public static int subtract(int firstNumber , int secondNumber)
+        {
+            int result = firstNumber - secondNumber;
+            return(result);
+        }
+        public static int add(int firstNumber , int secondNumber)
+        {
+            int result = firstNumber + secondNumber;
+            return(result);
+        }
     }
 }
