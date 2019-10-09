@@ -46,31 +46,33 @@ namespace myApp
                 Console.WriteLine("[ + for addition] [ - for subtraction] [ * for multiplication ] [ / for division ] "); // let them know which operands to use
                 string calculation = Console.ReadLine();        // Listen to their input to calculate
                 var seperatingCharacters = calculation.Split(); // split the input into an array to calculate in proper order
-                var orderOfExecution = new List<string>();      // create an empty list to help commit to the order of operations
+                // var orderOfExecution = new List<string>();   // create an empty list to help commit to the order of operations [Refactoring] The list is pointless and needs to be reworked in how to operate the commands
                 if(calculation == "exit")                       // listen for if they want to leave
                 {
                     Console.WriteLine("returning home");        // let them know where they are going
-                    Console.WriteLine();    //
-                    calculating = false;
-                    break;
+                    Console.WriteLine();                        // Space for legibility
+                    calculating = false;                        // Set the while loop bool to false to escape the current class
                 }
-                for(int i = 0; i < seperatingCharacters.Length; i++)
+                else                                            // If they do not exit
                 {
-                    if(seperatingCharacters[i] == "*")
+                    for(int i = 0; i < seperatingCharacters.Length; i++)  //iterate through all the items inside the list of their operaneds and number
                     {
-                        orderOfExecution.Add(seperatingCharacters[i]);
-                    }
-                    if(seperatingCharacters[i] == "/")
-                    {
-                        orderOfExecution.Add(seperatingCharacters[i]);
-                    }
-                    if(seperatingCharacters[i] == "+")
-                    {
-                        orderOfExecution.Add(seperatingCharacters[i]);
-                    }
-                    if(seperatingCharacters[i] == "-")
-                    {
-                        orderOfExecution.Add(seperatingCharacters[i]);
+                        if(seperatingCharacters[i] == "*")  // look for multiplication
+                        {
+                            // orderOfExecution.Add(seperatingCharacters[i]);
+                        }
+                        if(seperatingCharacters[i] == "/")  // look for division
+                        {
+                            // orderOfExecution.Add(seperatingCharacters[i]);
+                        }
+                        if(seperatingCharacters[i] == "+") // look for addition
+                        {
+                            // orderOfExecution.Add(seperatingCharacters[i]);
+                        }
+                        if(seperatingCharacters[i] == "-") // look for subtraction
+                        {
+                            // orderOfExecution.Add(seperatingCharacters[i]);
+                        }
                     }
                 }
             }
