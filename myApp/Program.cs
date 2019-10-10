@@ -37,7 +37,7 @@ namespace myApp
 	    }
 	    public static void Calculator()
 	    {
-	        bool calculating = true;                            // A run time variable so they can constantly stay in if they have multiple equations
+	       bool calculating = true;                             // A run time variable so they can constantly stay in if they have multiple equations
 	       while(calculating)                                   // A while loop to promote continual running
 	       {
 	            Console.WriteLine();                            // Space from last line to make sure it is a bit more legible
@@ -45,8 +45,7 @@ namespace myApp
                 Console.WriteLine("Please Enter the problem or type exit to return"); // Let them know what input is taken
                 Console.WriteLine("[ + for addition] [ - for subtraction] [ * for multiplication ] [ / for division ] "); // let them know which operands to use
                 string calculation = Console.ReadLine();        // Listen to their input to calculate
-                var seperatingCharacters = calculation.Split(); // split the input into an array to calculate in proper order
-                // var orderOfExecution = new List<string>();   // create an empty list to help commit to the order of operations [Refactoring] The list is pointless and needs to be reworked in how to operate the commands
+                var seperatingCharacters = new List<string>(calculation.Split()); // split the input into an array to calculate in proper order
                 if(calculation == "exit")                       // listen for if they want to leave
                 {
                     Console.WriteLine("returning home");        // let them know where they are going
@@ -55,27 +54,24 @@ namespace myApp
                 }
                 else                                            // If they do not exit
                 {
-                    for(int i = 0; i < seperatingCharacters.Length; i++)  //iterate through all the items inside the list of their operaneds and number
+                    if(seperatingCharacters.Contains("*"))  // look for multiplication
                     {
-                        if(seperatingCharacters[i] == "*")  // look for multiplication
-                        {
-                            // orderOfExecution.Add(seperatingCharacters[i]);
-                        }
-                        if(seperatingCharacters[i] == "/")  // look for division
-                        {
-                            // orderOfExecution.Add(seperatingCharacters[i]);
-                        }
-                        if(seperatingCharacters[i] == "+") // look for addition
-                        {
-                            // orderOfExecution.Add(seperatingCharacters[i]);
-                        }
-                        if(seperatingCharacters[i] == "-") // look for subtraction
-                        {
-                            // orderOfExecution.Add(seperatingCharacters[i]);
-                        }
+                        Console.WriteLine("Multiply");
+                    }
+                    if(seperatingCharacters.Contains("/"))  // look for division
+                    {
+                        Console.WriteLine("divide");
+                    }
+                    if(seperatingCharacters.Contains("+")) // look for addition
+                    {
+                        Console.WriteLine("add");
+                    }
+                    if(seperatingCharacters.Contains("-")) // look for subtraction
+                    {
+                        Console.WriteLine("subtract");
                     }
                 }
-            }
+           }
 	    }
 	    public static int multiply(int firstNumber , int secondNumber)
 	    {
